@@ -4,12 +4,14 @@
 
 <main>
     {% for key, values in results.items %}
-        <h3>{{ key }}</h3>
+    <div id="results">
+        <h3 id="artistHeader">{{ key }}</h3>
             {% for link in values.links %}
             <a href="{{link}}">{{link}}</a>
             <br><br>
         {% endfor %}
     {% endfor %}
+    </div>
 </main>
 
 {% endblock %}

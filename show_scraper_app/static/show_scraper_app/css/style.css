@@ -8,9 +8,14 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
 header {margin-top: 75px; text-align: center;}
 h1 {font-size: 140px; margin-bottom: 50px;}
+#results {text-align: center; }
+#artistHeader {font-size: 34px;}
+
 p {margin: 10px; padding: 10px; background-color: white; line-height: 30px;}
+
 main {
     border-radius: 5px;
     max-width: 900px;
@@ -26,19 +31,24 @@ label, input, button, ul, li, #scrapeButton {
     display: block;
     margin: 0px auto;
 }
+
 label {
     padding: 20px;
 }
+
 input {
     margin-top: 10px;
 }
+
 ul {
     padding: 20px;
 }
+
 li {
     padding: 5px; 
     font-weight: bold;
 }
+
 button {
     margin-top: 10px;
     padding: 10px;
@@ -48,6 +58,7 @@ button {
     color: white;
     font-weight: bold;
 }
+
 button, #scrapeButton {
     width: 100px;
     padding: 10px;
