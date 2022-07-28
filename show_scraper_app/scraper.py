@@ -3,9 +3,9 @@ from bs4 import BeautifulSoup
 
 def scrape(artists: list[str]) -> dict:
     results = {}
-
     for artist in artists:
-        url = 'https://google.com/search?q=' + artist + '+' + 'concert' + '+' + 'tickets'
+        url = f"https://google.com/search?q={artist} artist concert near me"
+        print(url)
         page = requests.get(url)
         soup = BeautifulSoup(page.text, "html.parser")
         links = soup.find_all("a")
