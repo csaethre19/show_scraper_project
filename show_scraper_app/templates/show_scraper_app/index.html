@@ -1,0 +1,36 @@
+{% extends 'show_scraper_app/base.html' %}
+{% block content %}
+{% load static %}
+
+<main>   
+	
+	<div class="artistInput">
+		<label for='artistList'>add your favorite artists...</label>
+		<input type="text" id="artistList" name="artistList"></input>
+		<button onclick="addArtist();">add</button>
+	</div>
+	<div>
+		<ul id="artistOutput">
+			
+		</ul>
+	</div>
+	<script>
+		var a = document.createElement('a');
+		var linkText = document.createTextNode("scrape!");
+		a.appendChild(linkText);
+		a.title = "scrape!"
+		a.href = "{% url 'results' artists=12345%}"
+		a.id = "scrapeButton"
+		document.body.appendChild(a);
+
+		$(document).ready(function() {
+			$("button").click(function() {
+				artists = getArtists()
+				a.href = "{% url 'results' artists=12345%}".replace(/12345/, artists.toString());
+			});
+		});
+
+
+	</script>
+</main>
+{% endblock %}

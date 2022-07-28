@@ -1,0 +1,15 @@
+{% extends 'show_scraper_app/base.html' %}
+{% block content %}
+{% load static %}
+
+<main>
+    {% for key, values in results.items %}
+        <h3>{{ key }}</h3>
+            {% for link in values.links %}
+            <a href="{{link}}">{{link}}</a>
+            <br><br>
+        {% endfor %}
+    {% endfor %}
+</main>
+
+{% endblock %}
